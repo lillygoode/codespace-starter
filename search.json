@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Taylor Swift Album Covers",
+    "section": "",
+    "text": "Select a Taylor Swift album to view its cover alongside its most similar and least similar match among all downloaded artist albums:\ndata = FileAttachment(\"taylor_similarity_extremes.csv\").csv({ typed: true })\n\nviewof selected_title = Inputs.select(\n  data.map(d =&gt; d.taylor_album),\n  { label: \"Choose a Taylor Swift Album:\", value: \"Fearless\" }\n)\n\ncurrent = data.find(d =&gt; d.taylor_album === selected_title)\n\nhtml`&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; margin-bottom: 2rem;\"&gt;\n  &lt;div style=\"background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 10px; padding: 1.2rem; text-align: center;\"&gt;\n    &lt;div style=\"font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6c757d; font-weight: bold;\"&gt;Selected Album&lt;/div&gt;\n    &lt;h4 style=\"margin: 0.4rem 0 1rem 0; font-size: 1.15rem;\"&gt;${current.taylor_album}&lt;/h4&gt;\n    &lt;img src=\"covers/${current.taylor_file}\" alt=\"${current.taylor_album}\" style=\"width: 100%; max-width: 320px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);\"&gt;\n  &lt;/div&gt;\n\n  &lt;div style=\"background: #eef7ee; border: 1px solid #c3e6cb; border-radius: 10px; padding: 1.2rem; text-align: center;\"&gt;\n    &lt;div style=\"font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #28a745; font-weight: bold;\"&gt;Most Similar (${current.most_similar_pct}% match)&lt;/div&gt;\n    &lt;h4 style=\"margin: 0.4rem 0 1rem 0; font-size: 1.15rem;\"&gt;${current.most_similar_artist} — ${current.most_similar_album}&lt;/h4&gt;\n    &lt;img src=\"covers/${current.most_similar_file}\" alt=\"${current.most_similar_album}\" style=\"width: 100%; max-width: 320px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);\"&gt;\n  &lt;/div&gt;\n\n  &lt;div style=\"background: #fdf2f2; border: 1px solid #f5c6cb; border-radius: 10px; padding: 1.2rem; text-align: center;\"&gt;\n    &lt;div style=\"font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #dc3545; font-weight: bold;\"&gt;Least Similar (${current.least_similar_pct}% match)&lt;/div&gt;\n    &lt;h4 style=\"margin: 0.4rem 0 1rem 0; font-size: 1.15rem;\"&gt;${current.least_similar_artist} — ${current.least_similar_album}&lt;/h4&gt;\n    &lt;img src=\"covers/${current.least_similar_file}\" alt=\"${current.least_similar_album}\" style=\"width: 100%; max-width: 320px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);\"&gt;\n  &lt;/div&gt;\n&lt;/div&gt;`"
+  },
+  {
+    "objectID": "index.html#all-albums-at-a-glance",
+    "href": "index.html#all-albums-at-a-glance",
+    "title": "Taylor Swift Album Covers",
+    "section": "All Albums at a Glance",
+    "text": "All Albums at a Glance\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTaylor Swift Album\nMost Similar Album\nMost Similar Artist\nMatch %\nLeast Similar Album\nLeast Similar Artist\nLowest Match %\n\n\n\n\n1989\nSweetener\nAriana Grande\n90.9\nRENAISSANCE\nBeyonce\n40.7\n\n\n1989 Taylors Version\n24K Magic\nBruno Mars\n95.7\nRENAISSANCE\nBeyonce\n50.1\n\n\nFearless\nSweetener\nAriana Grande\n97.2\nRENAISSANCE\nBeyonce\n40.4\n\n\nFearless Taylors Version\nThe Rise and Fall of a Midwest Princess\nChappell Roan\n95.8\nRENAISSANCE\nBeyonce\n58.7\n\n\nLover\nSweetener\nAriana Grande\n89.3\nRENAISSANCE\nBeyonce\n35.9\n\n\nMidnights\nBorn to Die\nLana Del Rey\n95.4\nRENAISSANCE\nBeyonce\n53.8\n\n\nRed\nViews\nDrake\n95.1\nSweetener\nAriana Grande\n65.2\n\n\nRed Taylors Version\nThe Rise and Fall of a Midwest Princess\nChappell Roan\n91.3\nSweetener\nAriana Grande\n63.8\n\n\nSpeak Now\n24K Magic\nBruno Mars\n95.6\nRENAISSANCE\nBeyonce\n46.5\n\n\nSpeak Now Taylors Version\nAfter Hours\nThe Weeknd\n95.4\nSweetener\nAriana Grande\n54.4\n\n\nTHE TORTURED POETS DEPARTMENT\nSweetener\nAriana Grande\n85.6\nRENAISSANCE\nBeyonce\n37.5\n\n\nTaylor Swift\nDAMN\nKendrick Lamar\n92.6\nRENAISSANCE\nBeyonce\n59.7\n\n\nevermore\nFine Line\nHarry Styles\n94.9\nRENAISSANCE\nBeyonce\n65.0\n\n\nfolklore\nBorn to Die\nLana Del Rey\n87.8\nRENAISSANCE\nBeyonce\n48.0\n\n\nreputation\nBorn to Die\nLana Del Rey\n87.9\nRENAISSANCE\nBeyonce\n48.4"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "distance.html",
+    "href": "distance.html",
+    "title": "Album Cover Similarity & Color Distance",
+    "section": "",
+    "text": "This analysis measures how similar album covers are across Taylor Swift and 21 popular artists based on their color concept and visual palettes.\nEach album cover was analyzed across five core color dimensions:\n\nMean RGB (Red, Green, Blue channels normalized 0 to 1)\nBrightness (perceptual luminance: \\(0.299R + 0.587G + 0.114B\\))\nSaturation (chroma / vividness of colors)\nColor Concept (e.g., Dark & Moody, Soft & Pastel, Cool & Blue, Warm & Red/Orange)\n\nThe Euclidean color distance measures similarity in this 5D color space:\n\\[d = \\sqrt{\\sum_{k} (x_{1,k} - x_{2,k})^2}\\]\nSmaller distances indicate album covers with closer color aesthetics and moods.\n\nlibrary(tidyverse)\n\nfeatures &lt;- read_csv(\"../distance/album_color_features.csv\", show_col_types = FALSE)\nclosest &lt;- read_csv(\"../distance/taylor_closest_matches.csv\", show_col_types = FALSE)"
+  },
+  {
+    "objectID": "distance.html#overview",
+    "href": "distance.html#overview",
+    "title": "Album Cover Similarity & Color Distance",
+    "section": "",
+    "text": "This analysis measures how similar album covers are across Taylor Swift and 21 popular artists based on their color concept and visual palettes.\nEach album cover was analyzed across five core color dimensions:\n\nMean RGB (Red, Green, Blue channels normalized 0 to 1)\nBrightness (perceptual luminance: \\(0.299R + 0.587G + 0.114B\\))\nSaturation (chroma / vividness of colors)\nColor Concept (e.g., Dark & Moody, Soft & Pastel, Cool & Blue, Warm & Red/Orange)\n\nThe Euclidean color distance measures similarity in this 5D color space:\n\\[d = \\sqrt{\\sum_{k} (x_{1,k} - x_{2,k})^2}\\]\nSmaller distances indicate album covers with closer color aesthetics and moods.\n\nlibrary(tidyverse)\n\nfeatures &lt;- read_csv(\"../distance/album_color_features.csv\", show_col_types = FALSE)\nclosest &lt;- read_csv(\"../distance/taylor_closest_matches.csv\", show_col_types = FALSE)"
+  },
+  {
+    "objectID": "distance.html#closest-matches-to-taylor-swift-albums",
+    "href": "distance.html#closest-matches-to-taylor-swift-albums",
+    "title": "Album Cover Similarity & Color Distance",
+    "section": "Closest Matches to Taylor Swift Albums",
+    "text": "Closest Matches to Taylor Swift Albums\nHere are the popular artist albums whose covers are most similar to each Taylor Swift album:\n\nclosest |&gt;\n  select(\n    `Taylor Swift Album` = taylor_album,\n    `Closest Artist` = other_artist,\n    `Album` = other_album,\n    `Similarity` = similarity_score_pct,\n    `Taylor Concept` = concept_1,\n    `Artist Concept` = concept_2\n  ) |&gt;\n  knitr::kable()\n\n\n\n\n\n\n\n\n\n\n\n\nTaylor Swift Album\nClosest Artist\nAlbum\nSimilarity\nTaylor Concept\nArtist Concept\n\n\n\n\nFearless\nAriana Grande\nSweetener\n97.2\nSoft & Pastel\nSoft & Pastel\n\n\nFearless Taylors Version\nChappell Roan\nThe Rise and Fall of a Midwest Princess\n95.8\nWarm & Red/Orange\nWarm & Red/Orange\n\n\n1989 Taylors Version\nBruno Mars\n24K Magic\n95.7\nBalanced & Warm\nBalanced & Warm\n\n\nSpeak Now\nBruno Mars\n24K Magic\n95.6\nBalanced & Warm\nBalanced & Warm\n\n\nSpeak Now Taylors Version\nThe Weeknd\nAfter Hours\n95.4\nDark & Moody\nDark & Moody\n\n\nMidnights\nLana Del Rey\nBorn to Die\n95.4\nBalanced & Warm\nBalanced & Warm\n\n\nRed\nDrake\nViews\n95.1\nCool & Blue\nBalanced & Warm\n\n\nevermore\nHarry Styles\nFine Line\n94.9\nBalanced & Warm\nBalanced & Warm\n\n\nTaylor Swift\nKendrick Lamar\nDAMN\n92.6\nBalanced & Warm\nBalanced & Warm\n\n\nRed Taylors Version\nChappell Roan\nThe Rise and Fall of a Midwest Princess\n91.3\nWarm & Red/Orange\nWarm & Red/Orange\n\n\n1989\nAriana Grande\nSweetener\n90.9\nLight Monochrome\nSoft & Pastel\n\n\nLover\nAriana Grande\nSweetener\n89.3\nSoft & Pastel\nSoft & Pastel\n\n\nreputation\nLana Del Rey\nBorn to Die\n87.9\nBalanced & Warm\nMuted / Grayscale\n\n\nfolklore\nLana Del Rey\nBorn to Die\n87.8\nBalanced & Warm\nMuted / Grayscale\n\n\nTHE TORTURED POETS DEPARTMENT\nAriana Grande\nSweetener\n85.6\nSoft & Pastel\nLight Monochrome"
+  },
+  {
+    "objectID": "distance.html#color-space-brightness-vs.-saturation",
+    "href": "distance.html#color-space-brightness-vs.-saturation",
+    "title": "Album Cover Similarity & Color Distance",
+    "section": "Color Space: Brightness vs. Saturation",
+    "text": "Color Space: Brightness vs. Saturation\nThe scatter plot below displays where each album cover falls in the color space:\n\nggplot(features, aes(x = brightness, y = saturation, color = color_concept)) +\n  geom_point(aes(shape = (artist == \"Taylor Swift\")), size = 3.5, alpha = 0.85) +\n  scale_shape_manual(\n    name = \"Artist\",\n    values = c(\"TRUE\" = 17, \"FALSE\" = 16),\n    labels = c(\"TRUE\" = \"Taylor Swift\", \"FALSE\" = \"Other Artists\")\n  ) +\n  theme_minimal(base_size = 12) +\n  labs(\n    title = \"Album Covers in Color Space\",\n    subtitle = \"Comparing Taylor Swift covers with 21 popular artists\",\n    x = \"Mean Brightness (0 = Dark, 1 = Light)\",\n    y = \"Mean Saturation (0 = Grayscale, 1 = Vivid)\",\n    color = \"Color Concept\"\n  ) +\n  theme(legend.position = \"right\")"
+  }
+]
